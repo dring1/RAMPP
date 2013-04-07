@@ -31,6 +31,7 @@ echo | sudo apt-add-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install -y nodejs
 rvm install 1.9.3
+source ~/.rvm/scripts/rvm
 rvm use 1.9.3 --default
 ruby -v
 gem install rails
