@@ -25,7 +25,7 @@ echo [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" >> ~/.
 
 #download all the dependencies for rails
 source ~/.rvm/scripts/rvm
-sudo apt-get -y install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion libgdbm-dev libffi-dev
+sudo apt-get -y install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion libgdbm-dev libffi-dev git-core
 #enables adding a repo as sudo alias wihout hitting enter
 echo | sudo apt-add-repository ppa:chris-lea/node.js
 sudo apt-get update
@@ -34,6 +34,7 @@ rvm install 1.9.3
 source ~/.rvm/scripts/rvm
 rvm use 1.9.3 --default
 ruby -v
+echo [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 gem install rails
 source ~/.rvm/scripts/rvm
 echo "Installing : XAMPP"
@@ -58,5 +59,5 @@ sudo chmod +x /etc/init.d/start_lampp.sh
 #add the file to files required to launch on start up
 sudo update-rc.d -f start_lampp.sh defaults
 
-
-
+echo "Rebooting system"
+sudo /sbin/reboot 
