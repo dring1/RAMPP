@@ -22,7 +22,7 @@ curl -L get.rvm.io | bash -s stable
 
 #ensures the rvm ruby env is activated on system log in
 echo [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" >> ~/.bash_profile
-
+echo [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" >> ~/.bashrc
 #download all the dependencies for rails
 source ~/.rvm/scripts/rvm
 sudo apt-get -y install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion libgdbm-dev libffi-dev git-core
@@ -60,4 +60,4 @@ sudo chmod +x /etc/init.d/start_lampp.sh
 sudo update-rc.d -f start_lampp.sh defaults
 
 echo "Rebooting system"
-sudo /sbin/reboot 
+#sudo /sbin/reboot 
